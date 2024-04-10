@@ -1,0 +1,23 @@
+<launch>
+
+    <!-- Launch joystick package -->
+    <!-- <include file="$(find joy)/launch/ps4joy.launch" >
+        <param name="autorepeat_rate" value="20" />
+    
+    </include> -->
+
+    <node name="joy_node" pkg="joy" type="joy_node" >
+        <param name="autorepeat_rate" value="20" />
+    </node>
+
+    <!-- Launch dynamic reconfigure -->
+    <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_console" args="-t" />
+
+    
+
+    <!-- Launch the sim wheel node  -->
+    <node name="wheel_drive" pkg="simple_sim_wheel_pkg" type="wheel_drive.py" output="screen"/>
+
+</launch>
+
+
