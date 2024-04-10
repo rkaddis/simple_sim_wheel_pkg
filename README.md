@@ -25,5 +25,7 @@ sudo apt install usb-modeswitch usb-modeswitch-data
 1. Launch the Simple Sim simulator: `roslaunch simple_sim_igvc sim_base.launch`
 2. Ensure the wheel is connected to your computer by running the setup command.
 3. Launch this package: `roslaunch simple_sim_wheel_pkg sim_wheel.launch`
+4. Once both programs are running, you may need to press the brake in once to get the vehicle moving. This issue is caused by the wheel's firmware along with usbmodeswitch.
+5. The control is ready when the vehicle starts idling forward.
 
 
